@@ -1,0 +1,20 @@
+#importing the required library
+import camelot
+
+#reading the pdf file
+pdf_file_path=r"C:\Users\Neeraj\Desktop\Camelot_pdf.pdf"
+
+#extracting the table from pdf (Stream method is used to extract the table)
+#lattice is another(default) flavor(method) availble.
+pdf_table_stream= camelot.read_pdf(pdf_file_path,flavor='stream')
+
+#saving the extracted table in csv file
+pdf_table_stream.export(r'C:\Users\Neeraj\Desktop\Etracted_table_stream.csv', f='csv')
+#you can use to_json(), to_excel() to_html() or to_sqlite() 
+#methods to export the table as JSON, Excel, HTML files or a sqlite database respectively.
+
+#NOTE: By default, Camelot only uses the first page of the PDF to extract tables. To specify multiple pages, you can use the pages keyword argument:
+#camelot.read_pdf(pdf_file_path, pages='1,2,3')
+
+#To extract tables from encrypted PDF files you must provide a password when calling read_pdf().
+#camelot.read_pdf(pdf_file_path, password='userpass')
