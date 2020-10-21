@@ -5,6 +5,7 @@ Note: Camelot only works with text-based PDFs and not scanned documents.
 (As Tabula explains, "If you can click and drag to select text in your table in a PDF viewer, then your PDF is text-based".)
 command to install Camelot: pip install camelot-py
 Documentation link: https://camelot-py.readthedocs.io/en/master/user/intro.html
+link of pdf used in code : https://camelot-py.readthedocs.io/en/master/_static/pdf/foo.pdf
 
 # Advantages: 
 **Camelot gives you complete control over table extraction by letting you tweak its settings.
